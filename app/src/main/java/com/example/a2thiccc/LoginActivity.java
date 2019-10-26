@@ -15,8 +15,10 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        final Button loginButton = findViewById(R.id.loginB);
+        final Button loginButton = findViewById(R.id.loginButton);
+        final Button createUserButton = findViewById(R.id.newUserButton);
 
+        //login service
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -24,5 +26,15 @@ public class LoginActivity extends AppCompatActivity {
                 startActivityForResult(nextA, 10);
             }
         });
+        //new User Service
+        createUserButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //...........
+                //open new user creation dialog here
+                //...........
+            }
+        });
+
     }
 }
