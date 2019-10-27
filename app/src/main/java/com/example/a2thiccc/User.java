@@ -16,17 +16,10 @@ public class User {
         this.name = name;
     }
 
-    public String getName(String name){
+    public String getName(){
         return this.name;
     }
 
-    public void setEmail(String email){
-        this.email = email;
-    }
-
-    public String getEmail(){
-        return this.email;
-    }
 
     public void setuName(String uName){
         this.uname = uName;
