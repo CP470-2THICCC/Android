@@ -3,11 +3,17 @@ package com.example.a2thiccc;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
-//TODO: everything lol
+/*TODO:
+    add view
+
+
+ */
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -15,10 +21,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final Button settingsButton = findViewById(R.id.settingsB);
-        final Button profileButton = findViewById(R.id.profileB);
-        final Button fitnessButton = findViewById(R.id.fitnessB);
-        final Button nutritionButton = findViewById(R.id.nutritionB);
+        final ImageButton settingsButton = findViewById(R.id.settingsB);
+        final ImageButton profileButton = findViewById(R.id.profileB);
+        final ImageButton fitnessButton = findViewById(R.id.fitnessB);
+        final ImageButton nutritionButton = findViewById(R.id.nutritionB);
 
         //Settings intent
         settingsButton.setOnClickListener(new View.OnClickListener() {
