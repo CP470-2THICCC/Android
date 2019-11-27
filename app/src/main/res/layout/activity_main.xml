@@ -10,69 +10,21 @@
         android:id="@+id/mainText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="10dp"
         android:text="@string/main_text" />
 
-    <ImageButton
-        android:id="@+id/settingsB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@android:drawable/ic_menu_compass"
-        android:text="@string/settings_button"
-        android:layout_marginTop="40dp"
-        android:layout_gravity="center"
-         />
-    <TextView
-        android:text="@string/settings_button"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_gravity="center"
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewMain"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:background="#333a3b"
+
         />
 
-    <ImageButton
-        android:id="@+id/profileB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@android:drawable/ic_menu_view"
-        android:text="@string/profile_button"
-        android:layout_marginTop="40dp"
-        android:layout_gravity="center"
-        />
-    <TextView
-        android:text="@string/profile_button"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_gravity="center"
-        />
 
-    <ImageButton
-        android:id="@+id/fitnessB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@android:drawable/ic_menu_myplaces"
-        android:text="@string/fitness_button"
-        android:layout_gravity="center"
-        android:layout_marginTop="40dp"/>
-    <TextView
-        android:text="@string/fitness_button"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_gravity="center"
-        />
-
-    <ImageButton
-        android:id="@+id/nutritionB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@android:drawable/ic_menu_today"
-        android:text="@string/nutrition_button"
-        android:layout_gravity="center"
-        android:layout_marginTop="40dp" />
-    <TextView
-        android:text="@string/nutrition_button"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_gravity="center"
-        />
 
 </LinearLayout>
+
