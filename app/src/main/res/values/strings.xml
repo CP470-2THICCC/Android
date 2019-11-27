@@ -21,4 +21,5 @@
     <string name="BodyStats">Body</string>
     <string name="Goals">Goals</string>
     <string name="Timer">Timer</string>
+    <string name="Weight">Weight</string>
 </resources>

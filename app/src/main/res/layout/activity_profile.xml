@@ -62,5 +62,12 @@
             app:layout_constraintTop_toTopOf="parent" />
     </LinearLayout>
 
+    <fragment
+        android:name="com.example.a2thiccc.body_metrics"
+        android:id="@+id/body_metrics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_metrics" />
+
 
 </LinearLayout>
