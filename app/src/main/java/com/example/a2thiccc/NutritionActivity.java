@@ -8,7 +8,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-//TODO: everything lol
+
+/*TODO:
+    add bmi
+    add water intake
+    add calorie counter
+    maybe recipies
+* */
 public class NutritionActivity extends AppCompatActivity {
 
     private Button waterButton;
