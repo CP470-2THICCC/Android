@@ -4,7 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-//TODO: everything lol
+
+/*TODO:
+    add bmi
+    add water intake
+    add calorie counter
+    maybe recipies
+* */
 public class NutritionActivity extends AppCompatActivity {
 
     @Override
