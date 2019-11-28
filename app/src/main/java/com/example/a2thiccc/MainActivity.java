@@ -12,10 +12,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-<<<<<<< HEAD
-
-//TODO: everything lol
-=======
 import Adapter.MainAdapter;
 
 /*TODO:
@@ -23,7 +19,6 @@ import Adapter.MainAdapter;
 
 
  */
->>>>>>> origin/MainScreen
 public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
@@ -54,13 +49,10 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(nextA, 10);
     }
 
-<<<<<<< HEAD
-=======
     public void startNutritionActivity(@Nullable View view){
         Intent nextA = new Intent(MainActivity.this, NutritionActivity.class);
         startActivityForResult(nextA, 10);
     }
 
->>>>>>> origin/MainScreen
 
 }
