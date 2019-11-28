@@ -22,4 +22,5 @@
     <string name="Goals">Goals</string>
     <string name="Timer">Timer</string>
     <string name="Weight">Weight</string>
+    <string name="bgColour">#FC7A6E</string>
 </resources>
