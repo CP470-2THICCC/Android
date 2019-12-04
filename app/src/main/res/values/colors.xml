@@ -8,4 +8,5 @@
     <color name="profileBackGroundColour">#7888a1</color>
     <color name="nutritionBackGroundColour">#7b658a</color>
     <color name="black">#202020</color>
+    <color name="editBackGroundColour">#b0b0b0</color>
 </resources>

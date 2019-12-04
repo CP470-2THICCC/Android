@@ -44,5 +44,6 @@
     <string name="nutritionInfoTitle">Nutrition Info</string>
     <string name="nutritionInfoText">Put info about your part here</string>
     <string name="mainInfoTitle">Main Page Info</string>
-    <string name="mainInfoText">Uses a recycler view to cycle through available activities.\nClick the views to go to the activity of your choice.\nClick the icon in the bottom right corner of the view to see information about the activity and author.\nVersion: 2.0\nAuthor: Luka Sitas</string>
+    <string name="mainInfoText">\n\nUses a recycler view to cycle through available activities.\n\nClick the views to go to the activity of your choice.\n\nClick the icon in the bottom right corner of the view to see information about the activity and author.\n\nAdd and remove items from the Recycler using the buttons in the view at the bottom of the Recycler View.\n\n\n\nVersion: 2.1\nAuthor: Luka Sitas</string>
+    <string name="addItemTitle">Add Item</string>
 </resources>

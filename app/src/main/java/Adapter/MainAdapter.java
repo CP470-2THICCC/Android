@@ -15,6 +15,13 @@ import com.example.a2thiccc.R;
 import java.util.ArrayList;
 import java.util.List;
 
+class editViewHolder extends RecyclerView.ViewHolder {
+
+    public editViewHolder(@NonNull View itemView) {
+        super(itemView);
+    }
+}
+
 class profileViewHolder extends RecyclerView.ViewHolder {
 
     public profileViewHolder(@NonNull View itemView) {
@@ -50,6 +57,7 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
     public static final int PROFILE = 0;
     public static final int NUTRITION = 1;
     public static final int FITNESS = 2;
+    public static final int EDIT = -1;
     ArrayList<Integer> items = new ArrayList<>();
     Context context;
 
@@ -97,6 +105,11 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
                 view = inflater.inflate(R.layout.fitness_widget,parent,false);
                 return new fitnessViewHolder(view);
 
+            case EDIT:
+                Log.i(ACTIVITY_NAME,"creating Editor");
+                view = inflater.inflate(R.layout.edit_widget,parent,false);
+                return new editViewHolder(view);
+
 
             default:
                 return null;
@@ -122,8 +135,33 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
                 fitnessViewHolder fViewHolder = (fitnessViewHolder) holder;
                 fViewHolder.setIsRecyclable(false);
                 break;
+
+            case EDIT:
+                Log.i(ACTIVITY_NAME,"binding Editor");
+                editViewHolder eViewHolder = (editViewHolder) holder;
+                eViewHolder.setIsRecyclable(false);
+                break;
+
             default:
                 break;
+        }
+    }
+
+
+
+    //add a new item before the editor
+    public void addNewItem(int itemCode) {
+        Log.i(ACTIVITY_NAME, "in addNewItem");
+        if (itemCode <= FITNESS && itemCode >= PROFILE) {
+            this.items.add(this.items.size() - 1, itemCode);
+
+        }
+    }
+    //remove the last item if it is not the item editor
+    public void removeLastItem(){
+        Log.i(ACTIVITY_NAME,"in removeLastItem");
+        if(this.items.size()>1){
+            this.items.remove(this.items.size()-2);
         }
     }
 

@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -34,6 +35,7 @@ import Adapter.MainAdapter;
 public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
+    MainAdapter adapter;
     ArrayList<Integer> items = new ArrayList<Integer>();
     protected static final String ACTIVITY_NAME = "MainActivity";
     Toolbar tb;
@@ -66,10 +68,11 @@ public class MainActivity extends AppCompatActivity {
         items.add(0);
         items.add(1);
         items.add(2);
+        items.add(-1);
 
 
 
-        MainAdapter adapter= new MainAdapter(items);
+        adapter = new MainAdapter(items);
 
         recyclerView.setAdapter(adapter);
 
@@ -94,9 +97,40 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(nextA, 10);
     }
 
-    public void editItems(@Nullable View view){
-        //recyclerView.
+    public void addItem(@Nullable View view){
 
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        LayoutInflater inflator =MainActivity.this.getLayoutInflater();
+        View customView = inflator.inflate(R.layout.edit_dialog,null);
+        builder
+                .setCancelable(true)
+                .setView(customView)
+                .show();
+    }
+    public void addProfile(@Nullable View view){
+        adapter.addNewItem(0);
+        adapter.notifyDataSetChanged();
+
+    }
+    public void addNutrition(@Nullable View view){
+        adapter.addNewItem(1);
+        adapter.notifyDataSetChanged();
+
+    }
+    public void addFitness(@Nullable View view){
+        adapter.addNewItem(2);
+        adapter.notifyDataSetChanged();
+
+    }
+
+
+
+
+
+
+    public void removeItem(@Nullable View view){
+        adapter.removeLastItem();
+        adapter.notifyDataSetChanged();
     }
 
     public void showProfileInfo(@Nullable View view){
