@@ -27,11 +27,9 @@ import java.util.List;
 
 import Adapter.MainAdapter;
 
-/*TODO:
-    add view
-
-
- */
+/**@author
+ * Luka Sitas
+ * */
 public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
@@ -81,22 +79,32 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
+    /**
+     * Starts the Fitness activity.
+     * */
     public void startFitnessActivity(@Nullable View view){
         Intent nextA = new Intent(MainActivity.this, FitnessActivity.class);
         startActivityForResult(nextA, 10);
     }
 
+    /**
+     * Starts the Profile activity.
+     * */
     public void startProfileActivity(@Nullable View view){
         Intent nextA = new Intent(MainActivity.this, ProfileActivity.class);
         startActivityForResult(nextA, 10);
     }
-
+    /**
+     * Starts the Nutrition activity.
+     * */
     public void startNutritionActivity(@Nullable View view){
         Intent nextA = new Intent(MainActivity.this, NutritionActivity.class);
         startActivityForResult(nextA, 10);
     }
 
+    /**
+     * Creates a dialog that will be able to add each type of view.
+     * */
     public void addItem(@Nullable View view){
 
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
@@ -107,32 +115,47 @@ public class MainActivity extends AppCompatActivity {
                 .setView(customView)
                 .show();
     }
-    public void addProfile(@Nullable View view){
-        adapter.addNewItem(0);
-        adapter.notifyDataSetChanged();
-
-    }
-    public void addNutrition(@Nullable View view){
-        adapter.addNewItem(1);
-        adapter.notifyDataSetChanged();
-
-    }
+    /**
+     * Adds a fitness view to the RecyclerView
+     * */
     public void addFitness(@Nullable View view){
         adapter.addNewItem(2);
         adapter.notifyDataSetChanged();
 
     }
+    /**
+     * Adds a profile view to the RecyclerView
+     * */
+    public void addProfile(@Nullable View view){
+        adapter.addNewItem(0);
+        adapter.notifyDataSetChanged();
+
+    }
+
+    /**
+     * Adds a nutrition view to the RecyclerView
+     * */
+    public void addNutrition(@Nullable View view){
+        adapter.addNewItem(1);
+        adapter.notifyDataSetChanged();
+
+    }
 
 
 
 
 
-
+    /**
+     * Calls the remove item for the adapter.
+     * */
     public void removeItem(@Nullable View view){
         adapter.removeLastItem();
         adapter.notifyDataSetChanged();
     }
 
+    /**
+     * Shows information about the Profile Page
+     * */
     public void showProfileInfo(@Nullable View view){
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
         String dText = getResources().getString(R.string.profileInfoText);
@@ -152,6 +175,9 @@ public class MainActivity extends AppCompatActivity {
                 .show();
     }
 
+    /**
+     * Shows information about the Nutrition Page
+     * */
     public void showNutritionInfo(@Nullable View view){
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
         String dText = getResources().getString(R.string.nutritionInfoText);
@@ -171,6 +197,9 @@ public class MainActivity extends AppCompatActivity {
                 .show();
     }
 
+    /**
+     * Shows information about the Fitness Page
+     * */
     public void showFitnessInfo(@Nullable View view){
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
         String dText = getResources().getString(R.string.fitnessInfoText);
@@ -190,6 +219,10 @@ public class MainActivity extends AppCompatActivity {
                 .show();
     }
 
+
+    /**
+     * Shows information about the Main Page
+     * */
     public void showMainInfo(@Nullable View view){
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
         String dText = getResources().getString(R.string.mainInfoText);
