@@ -23,4 +23,26 @@
     <string name="Timer">Timer</string>
     <string name="Weight">Weight</string>
     <string name="bgColour">#FC7A6E</string>
+    <string name="main_screen_Title">Main Screen</string>
+    <string name="main_toolbar_editor">Editor</string>
+    <string name="profile_page_title">Profile Page</string>
+    <string name="profile_line1">Personal Information</string>
+    <string name="profile_line3">Stop Watch</string>
+    <string name="profile_line2">Body metrics</string>
+    <string name="nutrition_page_title">Nutrition</string>
+    <string name="nutrition_line1">Water Consumption</string>
+    <string name="nutrition_line2">Caloric Intake</string>
+    <string name="nutrition_line3">Calendar</string>
+    <string name="fitness_page_title">Fitness</string>
+    <string name="fitness_line1">Workout Information</string>
+    <string name="fitness_line2">Item 2</string>
+    <string name="fitness_line3">Item 3</string>
+    <string name="profileInfoTitle">Profile Info</string>
+    <string name="profileInfoText">Put info about your part here</string>
+    <string name="fitnessInfoTitle">Fitness Info</string>
+    <string name="fitnessInfoText">Put info about your part here</string>
+    <string name="nutritionInfoTitle">Nutrition Info</string>
+    <string name="nutritionInfoText">Put info about your part here</string>
+    <string name="mainInfoTitle">Main Page Info</string>
+    <string name="mainInfoText">Uses a recycler view to cycle through available activities.\nClick the views to go to the activity of your choice.\nClick the icon in the bottom right corner of the view to see information about the activity and author.\nVersion: 2.0\nAuthor: Luka Sitas</string>
 </resources>

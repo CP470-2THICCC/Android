@@ -4,4 +4,8 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="bgColour">#FC7A6E</color>
+    <color name="fitnessBackGroundColour">#62826f</color>
+    <color name="profileBackGroundColour">#7888a1</color>
+    <color name="nutritionBackGroundColour">#7b658a</color>
+    <color name="black">#202020</color>
 </resources>

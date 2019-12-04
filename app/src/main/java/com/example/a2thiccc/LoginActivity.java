@@ -95,6 +95,10 @@ public class LoginActivity extends AppCompatActivity {
                     Toast temp = Toast.makeText(LoginActivity.this, "No users are registered. Please register.", Toast.LENGTH_SHORT);
                     temp.show();
                 }
+                else{
+                    Toast temp = Toast.makeText(LoginActivity.this, "Login attempt failed.", Toast.LENGTH_SHORT);
+                    temp.show();
+                }
             }
         });
         //new User Service
