@@ -5,24 +5,42 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/loginTB"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:background="@color/bgColour"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        tools:layout_editor_absoluteX="1dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
 
+        <TextView
+            style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+            android:text="LOG IN"
+            android:background="?attr/selectableItemBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </androidx.appcompat.widget.Toolbar>
     <EditText
         android:id="@+id/UserNameEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="150dp"
         android:hint="@string/username"
         android:gravity="center"
         android:inputType="text"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/loginTB" />
 
     <EditText
         android:id="@+id/PasswordEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:gravity="center"
         android:hint="@string/password"
         android:inputType="textPassword"
@@ -34,20 +52,35 @@
         android:id="@+id/loginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
         android:text="@string/login_button"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/PasswordEditText" />
+        android:layout_marginTop="20dp"
+        android:background="@color/bgColour"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PasswordEditText" />
 
     <Button
         android:id="@+id/newUserButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         android:text="@string/createUserButton"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/loginButton" />
+        android:layout_marginTop="20dp"
+        android:background="@color/bgColour"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginButton" />
+
+    <ProgressBar
+        android:id="@+id/loginBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

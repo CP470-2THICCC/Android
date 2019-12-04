@@ -9,17 +9,10 @@
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_gravity="center"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <TextView
-        android:id="@+id/profileText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/profile_text" />
+        android:background="@mipmap/thiccc_logo_foreground" />
 
     <LinearLayout
         android:layout_width="match_parent"

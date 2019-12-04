@@ -25,6 +25,12 @@
     <string name="Height">Height (in)</string>
     <string name="BMI">BMI</string>
 
+    <!-- ON MERGE: for profileInfoText this is my text
+
+
+    -->
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bgColour">#FC7A6E</string>
 </resources>

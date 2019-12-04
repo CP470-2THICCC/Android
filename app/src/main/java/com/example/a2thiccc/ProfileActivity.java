@@ -11,7 +11,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ToggleButton;
 
 import android.content.SharedPreferences;
@@ -26,13 +28,18 @@ import java.util.Locale;
 
 //TODO: everything lol
 public class ProfileActivity extends AppCompatActivity implements body_metrics.OnListFragmentInteractionListener, timer.OnFragmentInteractionListener, goals.OnFragmentInteractionListener {
-    //body metric variables
+    //Fragment variables
     Fragment bodyFragment;
     Fragment timerFragment;
     Fragment goalsFragment;
+    DatabaseHelper helper = new DatabaseHelper(this);
+
+    //body metric variables
+    EditText profileName;
     EditText bmi;
     EditText weight;
     EditText height;
+    ImageButton profile;
 
     //timer variables
     private EditText mEditTextInput;
@@ -68,9 +75,20 @@ public class ProfileActivity extends AppCompatActivity implements body_metrics.O
         bmi = (EditText) findViewById(R.id.editText);
         weight = (EditText) findViewById(R.id.editText3);
         height = (EditText) findViewById(R.id.editText4);
+        profile = (ImageButton) findViewById(R.id.imageButton);
+        profileName = (EditText) findViewById(R.id.UserNameEditText);
 
         bmi.setEnabled(false);
         bmi.setText("Enter above info for BMI");
+        /************* Tried to retrieve name from database but kept getting null reference for String user. Defaults value to "username"
+
+        SharedPreferences pref = getSharedPreferences("LoginPREFS", MODE_PRIVATE);
+
+        String user = pref.getString("user ", "username");
+        Log.i("username is", user);
+        //String pName = helper.searchName(user);
+
+        **************/
 
         weight.addTextChangedListener(new TextWatcher() {
             @Override
@@ -116,6 +134,7 @@ public class ProfileActivity extends AppCompatActivity implements body_metrics.O
                     FragmentTransaction ft = fm.beginTransaction();
                     bodyFragment = fm.findFragmentById(R.id.body_metrics);
                     ft.show(bodyFragment);
+                    ft.hide(timerFragment);
                     ft.commit();
                 }
                 else{
@@ -123,7 +142,9 @@ public class ProfileActivity extends AppCompatActivity implements body_metrics.O
                     FragmentTransaction ft = fm.beginTransaction();
                     bodyFragment = fm.findFragmentById(R.id.body_metrics);
                     ft.hide(bodyFragment);
-
+                    if(tTog.isChecked()){
+                        ft.show(timerFragment);
+                    }
                     ft.commit();
                 }
             };
@@ -140,6 +161,7 @@ public class ProfileActivity extends AppCompatActivity implements body_metrics.O
                     FragmentTransaction ft = fm.beginTransaction();
                     timerFragment = fm.findFragmentById(R.id.timer);
                     ft.show(timerFragment);
+                    ft.hide(bodyFragment);
                     ft.commit();
                 }
                 else{
@@ -147,7 +169,9 @@ public class ProfileActivity extends AppCompatActivity implements body_metrics.O
                     FragmentTransaction ft = fm.beginTransaction();
                     timerFragment = fm.findFragmentById(R.id.timer);
                     ft.hide(timerFragment);
-
+                    if(bTog.isChecked()){
+                        ft.show(bodyFragment);
+                    }
                     ft.commit();
                 }
             };
