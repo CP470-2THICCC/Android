@@ -9,17 +9,10 @@
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_gravity="center"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <TextView
-        android:id="@+id/profileText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/profile_text" />
+        android:background="@mipmap/thiccc_logo_foreground" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -46,28 +39,34 @@
             android:text="@string/Timer"
             android:textOff="@string/Timer"
             android:textOn="@string/Timer"
-            app:layout_constraintStart_toEndOf="@+id/toggleButton"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ToggleButton
-            android:id="@+id/toggleButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/Goals"
-            android:textOff="@string/Goals"
-            android:textOn="@string/Goals"
-
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
     </LinearLayout>
 
-    <fragment
-        android:name="com.example.a2thiccc.body_metrics"
-        android:id="@+id/body_metrics"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:layout="@layout/fragment_metrics" />
+        android:layout_height="match_parent">
 
+        <fragment
+            android:id="@+id/body_metrics"
+            android:name="com.example.a2thiccc.body_metrics"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_metrics" />
+
+        <fragment
+            android:id="@+id/timer"
+            android:name="com.example.a2thiccc.timer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_timer" />
+        <fragment
+            android:id="@+id/goals"
+            android:name="com.example.a2thiccc.goals"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_goals" />
+
+    </FrameLayout>
 
 </LinearLayout>

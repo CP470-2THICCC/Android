@@ -77,7 +77,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         cursor.close();
         return b;
     }
-
+    /************* Used to try to retrieve name from database, kept getting null reference in ProfileActivity.java
+    public String searchName(String name){
+        String query = "select " + COLUMN_NAME + " from " + TABLE_NAME + " where "+ "COLUMN_UNAME = name";
+        Cursor cursor = db.rawQuery(query, null);
+        String pname = cursor.getString(1);
+        return pname;
+    }
+    *************/
     public boolean tableExists(String tName){
         db = getReadableDatabase();
         String query = "select DISTINCT tbl_name from sqlite_master where tbl_name = '" + tName +"'";
