@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 
 
 /**
- * A simple {@link Fragment} subclass.
+ * A simple {@link Fragment} subclass (unused, yet to be implemented).
  * Activities that contain this fragment must implement the
  * {@link goals.OnFragmentInteractionListener} interface
  * to handle interaction events.
@@ -95,14 +95,7 @@ public class goals extends Fragment {
     }
 
     /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
+     * This interface lets user add daily goals and progress bar which updates when a goal is deleted. Implementation TBD.
      */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name

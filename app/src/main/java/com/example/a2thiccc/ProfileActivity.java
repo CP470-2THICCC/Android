@@ -26,7 +26,12 @@ import android.widget.Toast;
 
 import java.util.Locale;
 
-//TODO: everything lol
+/**
+ * A ProfileActivityClass that handles all profile activity
+ *
+ */
+
+
 public class ProfileActivity extends AppCompatActivity implements body_metrics.OnListFragmentInteractionListener, timer.OnFragmentInteractionListener, goals.OnFragmentInteractionListener {
     //Fragment variables
     Fragment bodyFragment;
@@ -90,6 +95,10 @@ public class ProfileActivity extends AppCompatActivity implements body_metrics.O
 
         **************/
 
+
+        /*
+         * Below calls calcBMI() when weight and height paremeters are changed
+         */
         weight.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -124,7 +133,11 @@ public class ProfileActivity extends AppCompatActivity implements body_metrics.O
             }
         });
 
-        //onClick listener for body button
+
+        /*
+         * onClick listener for body button
+         * shows current fragment and hides the one below it
+         */
         bTog.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View v){
@@ -151,7 +164,11 @@ public class ProfileActivity extends AppCompatActivity implements body_metrics.O
         });
 
         //=======================TIMER CODE======================================
-        //onClick listener for timer button
+        /*
+         *onClick listener for timer button
+         *shows current fragment and hides the one below it
+         *
+         */
         tTog.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View v){
@@ -177,6 +194,9 @@ public class ProfileActivity extends AppCompatActivity implements body_metrics.O
             };
         });
 
+        /*
+         *On Click handlers for timer fragments buttons
+         */
         mEditTextInput = findViewById(R.id.edit_text_input);
         mTextViewCountDown = findViewById(R.id.text_view_countdown);
 
@@ -221,7 +241,7 @@ public class ProfileActivity extends AppCompatActivity implements body_metrics.O
                 resetTimer();
             }
         });
-        /** Tried to make a dynamic progress bar with tasklist but too difficult, work on later.
+        /** Tried to make a dynamic progress bar with tasklist but couldnt finish, work on later.
         //=======================GOALS CODE=====================================
         //onClick listener for goals button
         gTog.setOnClickListener(new View.OnClickListener()
@@ -264,6 +284,10 @@ public class ProfileActivity extends AppCompatActivity implements body_metrics.O
          */
     }
     //=======================BODY METRIC FUNCTIONS========================================
+    /*
+     * calcBMI() checks if text boces of weight and height have been changed and then calculate users BMI
+     * based on formula given weight of lbs and height of inches
+     */
     private void calcBMI(){
         if (!(weight.getText().toString().matches("")) && !(height.getText().toString().matches(""))){
             int lbs = Integer.parseInt(weight.getText().toString());
@@ -388,6 +412,9 @@ public class ProfileActivity extends AppCompatActivity implements body_metrics.O
     }
 
     //==========================ON START=========================================
+    /*
+     *  Initially hides fragments until clicked on
+     */
     public void onStart(){
         super.onStart();
 

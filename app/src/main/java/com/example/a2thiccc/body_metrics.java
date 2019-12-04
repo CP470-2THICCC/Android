@@ -10,6 +10,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
+/**
+ * A simple {@link Fragment} subclass.
+ * Activities that contain this fragment must implement the
+ * {@link goals.OnFragmentInteractionListener} interface
+ * to handle interaction events.
+ * Use the {@link goals#newInstance} factory method to
+ * create an instance of this fragment.
+ */
+
 public class body_metrics extends Fragment {
 
     // TODO: Customize parameter argument names
@@ -63,14 +72,7 @@ public class body_metrics extends Fragment {
     }
 
     /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p/>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
+     * This interface shows the weight and height of the user then calculates resulting BMI. Handled in ProfileActivity class
      */
     public interface OnListFragmentInteractionListener {
         // TODO: Update argument type and name
