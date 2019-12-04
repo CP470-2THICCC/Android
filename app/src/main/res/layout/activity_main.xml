@@ -1,29 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:theme="@android:style/Theme.DeviceDefault.NoActionBar"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/mainText"
+    tools:context=".MainActivity"
+    >
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mainScreenToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/main_text" />
+        android:background="@color/bgColour"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="?attr/selectableItemBackground"
+                android:text="@string/main_screen_Title"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <ImageButton
+                android:id="@+id/editButton"
+                style="@android:style/Widget.Material.Light.ImageButton"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+
+                android:src="@drawable/question"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:onClick="showMainInfo"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
+    </androidx.appcompat.widget.Toolbar>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewMain"
-        android:layout_height="match_parent"
+
+    <androidx.cardview.widget.CardView
+
         android:layout_width="match_parent"
+
         android:layout_margin="20dp"
-        android:background="#333a3b"
+        app:cardCornerRadius="10dp"
 
-        />
+        app:layout_constraintTop_toBottomOf="@id/mainScreenToolbar"
+        android:layout_height="match_parent">
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#647377" />
+    </androidx.cardview.widget.CardView>
 
 
 </LinearLayout>

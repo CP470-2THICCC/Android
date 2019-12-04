@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/bgColour">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/addItemTitle"
+
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+    <ImageView
+        android:src="@mipmap/thiccc_logo_round"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:scaleType="center"
+    />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <Button
+            android:id="@+id/profileButton"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="@string/profile_button"
+            android:onClick="addProfile"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/nutritionButton"
+            />
+        <Button
+            android:id="@+id/nutritionButton"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="@string/nutrition_button"
+            android:onClick="addNutrition"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/profileButton"
+            app:layout_constraintEnd_toStartOf="@+id/fitnessButton"
+            />
+
+        <Button
+            android:id="@+id/fitnessButton"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:onClick="addFitness"
+            android:text="@string/fitness_button"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/nutritionButton"
+            app:layout_constraintEnd_toEndOf="parent"
+             />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

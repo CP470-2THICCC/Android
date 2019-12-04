@@ -290,23 +290,6 @@ public class LoginActivity extends AppCompatActivity {
                         });
                 final AlertDialog d2 = custom2.create();
                 d2.show();
-//                AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
-//                String dText = "1.Create an account before logging in.\n" +
-//                        "2. Enter correct credentials to log in\n";
-//                CharSequence dialog_title = "Help";
-//                final TextView dialogText = new TextView(this);
-//                dialogText.setText(dText);
-//                builder
-//                        .setCancelable(true)
-//                        .setView(dialogText)
-//                        .setTitle(dialog_title)
-//                        .setNegativeButton("OK", new DialogInterface.OnClickListener() {
-//                            @Override
-//                            public void onClick(DialogInterface dialogInterface, int i) {
-//                                dialogInterface.dismiss(); //dismisses the alertdialog
-//                            }
-//                        })
-//                        .show();
                 break;
         }
         return true;

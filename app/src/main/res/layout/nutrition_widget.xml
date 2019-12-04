@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="horizontal" android:layout_width="match_parent"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#7b658a"
+    android:layout_margin="5dp"
+    card_view:cardCornerRadius="10dp">
+    <LinearLayout
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@color/nutritionBackGroundColour"
     android:layout_margin="1dp"
     android:padding="8dp"
     android:onClick="startNutritionActivity">
@@ -14,25 +19,46 @@
         android:layout_height="60dp"
         android:layout_gravity="center_vertical"
         android:layout_margin="5dp"
-        tools:src="@drawable/profile" />
+        android:src="@drawable/nutrition" />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="You've eaten [value] cal. today"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nutrition_page_title"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="maybe add callories tracker progress bar. or water consumption"
-            />
-
-    </LinearLayout>
+            <TextView
+                android:layout_margin="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nutrition_line1"
+                />
+            <TextView
+                android:layout_margin="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nutrition_line2"
+                />
+            <TextView
+                android:layout_margin="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nutrition_line3"
+                />
+            <ImageView
+                android:layout_margin="5dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="right"
+                android:src="@drawable/question"
+                android:onClick="showNutritionInfo"
+                />
+        </LinearLayout>
 
 </LinearLayout>
+</androidx.cardview.widget.CardView>

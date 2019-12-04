@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    card_view:cardCornerRadius="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="1dp"
+        android:background="@color/editBackGroundColour"
+        android:padding="8dp">
+
+        <ImageButton
+            android:id="@+id/addButton"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintEnd_toStartOf="@id/removeButton"
+            android:src="@android:drawable/ic_menu_add"
+            android:onClick="addItem"
+           >
+
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/removeButton"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:src="@android:drawable/ic_menu_delete"
+            card_view:layout_constraintStart_toEndOf="@id/addButton"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="8dp"
+            android:onClick="removeItem">
+
+        </ImageButton>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
