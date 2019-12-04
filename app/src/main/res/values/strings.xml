@@ -25,8 +25,9 @@
     <string name="Height">Height (in)</string>
     <string name="BMI">BMI</string>
 
-    <!-- ON MERGE: for profileInfoText this is my text
+    <!-- ON MERGE: for profileInfoText this is my text:
 
+        Following activity calculates and displays BMI from user inputted weight and height. A stopwatch functionality is also included for any possible user activity.
 
     -->
 

@@ -95,6 +95,7 @@ public class timer extends Fragment {
 
     /**
      * This interface controls a stopwatch which can be started, stopped, and paused. Handled in ProfileActivity class
+     * @author https://codinginflow.com/tutorials/android/chronometer
      */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name

@@ -164,7 +164,7 @@ public class ProfileActivity extends AppCompatActivity implements body_metrics.O
         });
 
         //=======================TIMER CODE======================================
-        /*
+        /**
          *onClick listener for timer button
          *shows current fragment and hides the one below it
          *
@@ -194,8 +194,9 @@ public class ProfileActivity extends AppCompatActivity implements body_metrics.O
             };
         });
 
-        /*
+        /**
          *On Click handlers for timer fragments buttons
+         * @author https://codinginflow.com/tutorials/android/chronometer
          */
         mEditTextInput = findViewById(R.id.edit_text_input);
         mTextViewCountDown = findViewById(R.id.text_view_countdown);
@@ -302,6 +303,10 @@ public class ProfileActivity extends AppCompatActivity implements body_metrics.O
         }
     }
     //=======================TIMER FUNCTIONS========================================
+    /**
+     *Timer functions for stopwatch
+     * @author https://codinginflow.com/tutorials/android/chronometer
+     */
 
     private void setTime(long milliseconds) {
         mStartTimeInMillis = milliseconds;
