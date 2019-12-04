@@ -51,7 +51,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         setSupportActionBar(tb);
-
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        tb.setLogo(R.drawable.logo2);
         Log.i(ACTIVITY_NAME,"in onCreate");
 
         recyclerView = (RecyclerView)findViewById(R.id.recyclerViewMain);
