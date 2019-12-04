@@ -22,5 +22,6 @@
     <string name="Goals">Goals</string>
     <string name="Timer">Timer</string>
     <string name="Weight">Weight</string>
-    <string name="bgColour">#FC7A6E</string>
+    <string name="Help">Author: Jun Cao\n\nVersion: 4.0\n\nNote: Fresh APK installation will not have\nDB set up.\n\nInstructions:\n\n1. Create an account before logging in.\n\n2. Enter correct credentials to log in.
+    </string>
 </resources>

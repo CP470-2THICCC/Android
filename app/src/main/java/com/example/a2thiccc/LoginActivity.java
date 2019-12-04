@@ -19,16 +19,19 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.widget.Toolbar;
+
+import java.lang.ref.WeakReference;
+
 //TODO: Help Toolbar
-//TODO: Possible fragment for more data after registering
 public class LoginActivity extends AppCompatActivity {
-    View view;
+    View view, view2;
     EditText usernameEdit, passwordEdit, nameEdit, confirmPassEdit,a,b;
     DatabaseHelper helper = new DatabaseHelper(this);
     String user,pass;
     ProgressBar loginBar;
     String res = "";
     String namestr,unamestr,pwstr,confpwstr;
+    String newUser;
     Toolbar loginTB;
 
     @Override
@@ -44,12 +47,20 @@ public class LoginActivity extends AppCompatActivity {
         b = findViewById(R.id.PasswordEditText);
         loginTB = findViewById(R.id.loginTB);
         setSupportActionBar(loginTB);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        loginTB.setLogo(R.drawable.logo2);
         //gets MYPREFS
         SharedPreferences pref = getSharedPreferences("LoginPREFS", MODE_PRIVATE);
         //gets the string with key email else default
         user = pref.getString("user", "username");
         //sets retrieved value to email edittext view
-        a.setText(user);
+        if(user.equals("username")){
+            //if no previously entered username in sharedpref
+            a.setHint(user);
+        }
+        else{
+            a.setText(user);
+        }
         //login service
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,43 +69,12 @@ public class LoginActivity extends AppCompatActivity {
                 //gets the user and pass from the login activity
                 user = a.getText().toString();
                 pass = b.getText().toString();
-
-                validateLogin v = new validateLogin();
+                //get the current email entered into email editview
+                newUser = a.getText().toString();
+                validateLogin v = new validateLogin(LoginActivity.this);
                 v.execute();
 
-                //processes what to do after running validateLogin AsyncTask
-                if (res.equals("1")) {
-                    Toast temp = Toast.makeText(LoginActivity.this, "Username or password are empty", Toast.LENGTH_SHORT);
-                    temp.show();
-                }
-                else if (res.equals("2")) {
-                    //get the current email entered into email editview
-                    String newUser = a.getText().toString();
 
-                    //gets MYPREFS
-                    SharedPreferences pref = getSharedPreferences("LoginPREFS", MODE_PRIVATE);
-
-                    //editor
-                    SharedPreferences.Editor editor = pref.edit();
-
-                    //puts in user email into user key in sharedprefences
-                    editor.putString("user", newUser);
-                    editor.commit();
-
-                    Intent nextA = new Intent(LoginActivity.this, MainActivity.class);
-                    nextA.putExtra("Username", user);
-                    Toast temp = Toast.makeText(LoginActivity.this, "Login successful!", Toast.LENGTH_SHORT);
-                    temp.show();
-                    startActivity(nextA);
-                }
-                else if (res.equals("3")) {
-                    Toast temp = Toast.makeText(LoginActivity.this, "Username and password don't match", Toast.LENGTH_SHORT);
-                    temp.show();
-                }
-                else if (res.equals("0")) {
-                    Toast temp = Toast.makeText(LoginActivity.this, "No users are registered. Please register.", Toast.LENGTH_SHORT);
-                    temp.show();
-                }
             }
         });
         //new User Service
@@ -109,6 +89,11 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private class validateLogin extends AsyncTask<String, Integer, String> {
+
+        private WeakReference<LoginActivity> loginActivity;
+        public validateLogin(LoginActivity loginActivity){
+            this.loginActivity = new WeakReference<>(loginActivity);
+        }
         @Override
         protected String doInBackground(String... strings) {
 
@@ -138,6 +123,38 @@ public class LoginActivity extends AppCompatActivity {
         protected void onPostExecute(String a) {
                 loginBar.setVisibility(View.INVISIBLE);
                 res = a;
+                if (loginActivity.get() != null){
+                    //processes what to do after running validateLogin AsyncTask
+                    if (res.equals("1")) {
+                        Toast temp = Toast.makeText(LoginActivity.this, "Username or password are empty", Toast.LENGTH_SHORT);
+                        temp.show();
+                    }
+                    else if (res.equals("2")) {
+                        //gets MYPREFS
+                        SharedPreferences pref = getSharedPreferences("LoginPREFS", MODE_PRIVATE);
+
+                        //editor
+                        SharedPreferences.Editor editor = pref.edit();
+
+                        //puts in user email into user key in sharedprefences
+                        editor.putString("user", newUser);
+                        editor.commit();
+
+                        Intent nextA = new Intent(LoginActivity.this, MainActivity.class);
+                        nextA.putExtra("Username", user);
+                        Toast temp = Toast.makeText(LoginActivity.this, "Login successful!", Toast.LENGTH_SHORT);
+                        temp.show();
+                        startActivity(nextA);
+                    }
+                    else if (res.equals("3")) {
+                        Toast temp = Toast.makeText(LoginActivity.this, "Username and password don't match", Toast.LENGTH_SHORT);
+                        temp.show();
+                    }
+                    else if (res.equals("0")) {
+                        Toast temp = Toast.makeText(LoginActivity.this, "No users are registered. Please register.", Toast.LENGTH_SHORT);
+                        temp.show();
+                    }
+                }
         }
         @Override
         protected void onProgressUpdate(Integer... values) {
@@ -177,7 +194,14 @@ public class LoginActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialogInterface, int i) {
                         //do nothing because we will be overriding it
                     }
-                });
+                })
+                .setNegativeButton("Cancel",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int whichButton) {
+                                dialog.dismiss();
+                            }
+                        }
+                );
         final AlertDialog dialog = custom.create();
         dialog.show();
         dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(new View.OnClickListener(){
@@ -246,23 +270,43 @@ public class LoginActivity extends AppCompatActivity {
         switch (id) {
             case R.id.action_1:
                 Log.d("Toolbar", "Question mark selected.");
-                AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
-                String dText = "1.Create an account before logging in.\n" +
-                        "2. Enter correct credentials to log in\n";
-                CharSequence dialog_title = "Help";
-                final TextView dialogText = new TextView(this);
-                dialogText.setText(dText);
-                builder
+                //Create builder pattern for alert dialog
+                AlertDialog.Builder custom2 = new AlertDialog.Builder(LoginActivity.this);
+
+                //Inflater from LoginActivity
+                LayoutInflater inflater2 = LoginActivity.this.getLayoutInflater();
+
+                //Inflate the custom signup dialog
+                view2 = inflater2.inflate(R.layout.help_dialog, null);
+
+                //Set properties
+                custom2.setView(view2)
                         .setCancelable(true)
-                        .setView(dialogText)
-                        .setTitle(dialog_title)
                         .setNegativeButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 dialogInterface.dismiss(); //dismisses the alertdialog
                             }
-                        })
-                        .show();
+                        });
+                final AlertDialog d2 = custom2.create();
+                d2.show();
+//                AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
+//                String dText = "1.Create an account before logging in.\n" +
+//                        "2. Enter correct credentials to log in\n";
+//                CharSequence dialog_title = "Help";
+//                final TextView dialogText = new TextView(this);
+//                dialogText.setText(dText);
+//                builder
+//                        .setCancelable(true)
+//                        .setView(dialogText)
+//                        .setTitle(dialog_title)
+//                        .setNegativeButton("OK", new DialogInterface.OnClickListener() {
+//                            @Override
+//                            public void onClick(DialogInterface dialogInterface, int i) {
+//                                dialogInterface.dismiss(); //dismisses the alertdialog
+//                            }
+//                        })
+//                        .show();
                 break;
         }
         return true;

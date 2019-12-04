@@ -3,6 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/original"
+    android:textColor="@color/black"
+    android:color="@color/white"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
     <androidx.appcompat.widget.Toolbar
@@ -10,6 +13,8 @@
         android:layout_width="409dp"
         android:layout_height="wrap_content"
         android:background="@color/bgColour"
+        android:textColor="@color/black"
+        android:color="@color/white"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         tools:layout_editor_absoluteX="1dp"
@@ -17,19 +22,17 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent">
 
-        <TextView
-            style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
-            android:text="LOG IN"
-            android:background="?attr/selectableItemBackground"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
     </androidx.appcompat.widget.Toolbar>
     <EditText
         android:id="@+id/UserNameEditText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginTop="150dp"
         android:hint="@string/username"
+        android:textColorHint="@color/hintcolor"
+        android:layout_marginHorizontal="20dp"
+        android:textColor="@color/black"
+        android:background="@drawable/border"
         android:gravity="center"
         android:inputType="text"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -39,9 +42,13 @@
     <EditText
         android:id="@+id/PasswordEditText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:textColorHint="@color/hintcolor"
         android:gravity="center"
+        android:textColor="@color/black"
+        android:background="@drawable/border"
         android:hint="@string/password"
         android:inputType="textPassword"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -50,22 +57,26 @@
 
     <Button
         android:id="@+id/loginButton"
-        android:layout_width="wrap_content"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:text="@string/login_button"
+        android:textColor="@color/black"
+        android:color="@color/black"
         android:layout_marginTop="20dp"
-        android:background="@color/bgColour"
+        android:background="@drawable/buttonborder"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PasswordEditText" />
 
     <Button
         android:id="@+id/newUserButton"
-        android:layout_width="wrap_content"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:text="@string/createUserButton"
         android:layout_marginTop="20dp"
-        android:background="@color/bgColour"
+        android:textColor="@color/black"
+        android:color="@color/black"
+        android:background="@drawable/buttonborder"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginButton" />
