@@ -67,13 +67,13 @@ public class NutritionActivity extends AppCompatActivity {
             }
         }
 
-        waterLeft = findViewById(R.id.waterLeftText);
+        waterLeft = findViewById(R.id.waterLeftNum);
         waterButton = findViewById(R.id.waterButton);
         waterIn = findViewById(R.id.waterEditText);
         waterProgressBar = (ProgressBar) findViewById(R.id.waterProgressBar);
 
 
-        calLeft = findViewById(R.id.calLeftText);
+        calLeft = findViewById(R.id.calLeftNum);
         calButton = findViewById(R.id.calButton);
         calIn = findViewById(R.id.calEditText);
         calProgressBar = (ProgressBar) findViewById(R.id.calProgressBar);
@@ -92,12 +92,12 @@ public class NutritionActivity extends AppCompatActivity {
                 waterProgress = waterArray[currentYear][currentMonth][currentDay];
                 waterResult = 8 - waterProgress;
                 waterProgressBar.setProgress(waterProgress);
-                waterLeft.setText(R.string.waterLeft2 +waterResult);
+                waterLeft.setText(String.valueOf(waterResult));
 
                 calProgress = calArray[currentYear][currentMonth][currentDay];
                 calResult = 2000 - calProgress;
                 calProgressBar.setProgress(calProgress);
-                calLeft.setText(R.string.calLeft2 +calResult);
+                calLeft.setText(String.valueOf(calResult));
             }
         });
 
@@ -119,7 +119,7 @@ public class NutritionActivity extends AppCompatActivity {
                 }
                 waterResult = 8 - waterProgress;
                 waterProgressBar.setProgress(waterProgress);
-                waterLeft.setText(R.string.waterLeft2 +waterResult);
+                waterLeft.setText(String.valueOf(waterResult));
                 if (waterResult == 0) {
                     Toast toast = Toast.makeText(getApplicationContext(), R.string.waterDrank, Toast.LENGTH_LONG);
                     toast.show();
@@ -157,7 +157,7 @@ public class NutritionActivity extends AppCompatActivity {
                 }
                 calResult = 2000 - calProgress;
                 calProgressBar.setProgress(calProgress);
-                calLeft.setText(R.string.calLeft2 +calResult);
+                calLeft.setText(String.valueOf(calResult));
             }
         });
     }

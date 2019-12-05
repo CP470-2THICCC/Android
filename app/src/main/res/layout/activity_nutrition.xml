@@ -17,6 +17,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="0"
         android:orientation="horizontal">
 
         <TextView
@@ -45,8 +46,16 @@
         android:id="@+id/waterLeftText"
         android:layout_width="291dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_weight="0"
         android:text="@string/waterLeft" />
+
+    <TextView
+        android:id="@+id/waterLeftNum"
+        android:layout_width="291dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="8"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
     <ProgressBar
         android:id="@+id/waterProgressBar"
@@ -87,8 +96,16 @@
         android:id="@+id/calLeftText"
         android:layout_width="291dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_weight="0"
         android:text="@string/calLeft" />
+
+    <TextView
+        android:id="@+id/calLeftNum"
+        android:layout_width="291dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="2000"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
     <ProgressBar
         android:id="@+id/calProgressBar"

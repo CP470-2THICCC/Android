@@ -8,7 +8,7 @@
     <string name="login_text">This is the login page</string>
     <string name="settings_text">This is the settings page</string>
     <string name="fitness_text">This is the fitness page</string>
-    <string name="nutrition_text">This is the nutrition page</string>
+    <string name="nutrition_text">Track your nutrition here</string>
     <string name="main_text">This is the main page</string>
     <string name="profile_text">This is the profile page</string>
     <string name="username">Username</string>
@@ -28,10 +28,8 @@
     <string name="waterButton">Enter water</string>
     <string name="Calories">How many calories did you take in?</string>
     <string name="calButton">Enter calories</string>
-    <string name="waterLeft">Glasses left to drink: 8</string>
-    <string name="calLeft">Max calories left: 2000</string>
-    <string name="waterLeft2">Glasses left to drink: </string>
-    <string name="calLeft2">Max calories left: </string>
+    <string name="waterLeft">Glasses left to drink: </string>
+    <string name="calLeft">Max calories left: </string>
     <string name="waterDrank">You drank the daily recommended amount of water</string>
 
 
