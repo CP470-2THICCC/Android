@@ -56,5 +56,46 @@
     <string name="snackbar">Vous avez dépassé votre limite quotidienne de calories!</string>
     <string name="snackbarBtn">Je vais essayer de faire mieux</string>
     <string name="snackbarMsg">Bien, sinon vous resterez 2Thiccc!</string>
+    <string name="exercise_list">liste d\'exercices</string>
+    <string name="intro_message">Veuillez sélectionner votre niveau de forme actuel:</string>
+    <string name="intro_message2">Bienvenue chez 2Thicc Fitness! Nous vous aidons à planifier et à atteindre vos objectifs en choisissant vos exercices préférés et en organisant vos propres circuits!</string>
+    <string name="exercise_desc">Vous trouverez ci-dessous un large éventail d\'exercices disponibles dans notre base de données:</string>
+    <string name="calendar_desc">Vous pouvez ajouter, supprimer et garder une trace de vos circuits avec notre Thiccbook:</string>
+    <string name="beginner_desc">Vous êtes un débutant dans l\’entraînement et avez peu de connaissances en matière d’exercices, vous êtes actif 1 à 3 jours par semaine</string>
+    <string name="intermediate_desc">Un stagiaire expérimenté avec une connaissance modérée à un peu des exercices, vous êtes actif 3 à 5 jours par semaine</string>
+    <string name="advanced_desc">En tant que stagiaire avancé, vous avez des années d\’expérience constante à travailler votre corps et vous êtes actif 4 à 7 jours par semaine</string>
+    <string name="push_ups">Exercice de pose avec le visage, les paumes des mains et les orteils dirigés vers le bas, en gardant les jambes et le dos droits, les bras tendus en arrière pour pousser le corps de haut en bas.\nObjectif: Le haut du corps, les épaules</string>
+    <string name="squat_thrust">La poussée de squat renforce la force et l\'explosivité du bas du corps en mettant l\'accent sur les quads, les fessiers et les ischio-jambiers.\nCible: bas du corps, jambes</string>
+    <string name="squats">Le squat est un aliment de base pour le corps entier qui fait travailler vos fessiers, vos quads et vos ischio-jambiers et renforce sournoisement votre cœur.</string>
+    <string name="leg_raises">La levée de la jambe est un exercice de musculation qui cible les fléchisseurs antérieurs de la hanche.\nObjectif: Jambes</string>
+    <string name="crunches">Le crunch de base est l\'exercice abdominal consommé dans un programme de musculation. Portez une attention particulière à votre forme lorsque vous faites des redressements, surtout si vous avez des problèmes au bas du dos ou au cou.\nCible: Noyau, Abs</string>
+    <string name="mountain_climbers">Un alpiniste est un exercice de poids corporel utile pour brûler des calories, développer l\'endurance et renforcer le noyau.\nCible: Noyau</string>
+    <string name="plank">La planche (également appelée maintien avant, vol stationnaire ou pont abdominal) est un exercice de force isométrique qui consiste à maintenir une position similaire à une poussée pendant le temps maximal possible.\nCible: Noyau</string>
+    <string name="high_knees">High Knees est un exercice cardio-intensif effectué à un rythme rapide. Il engage votre cœur, renforce tous les muscles de vos jambes, accélère votre rythme cardiaque et améliore votre élan, votre coordination et votre flexibilité.\nCible: Jambes
+</string>
+    <string name="app_name2">Thiccbook</string>
+    <string name="hintTxtItem">Entrez un article ici</string>
+    <string name="lblBtnAdd">Ajouter</string>
+    <string name="txtEmpty">La liste est vide</string>
+    <string name="lblBtnDel">Supprimer les exercices sélectionnés</string>
+    <string name="lblBtnSave">sauver</string>
+
+    <string name="proceed_button">Procéder</string>
+    <string-array name="difficulties">
+        <item>Débutant</item>
+        <item>Intermédiaire</item>
+        <item>Avancé</item>
+    </string-array>
+
+    <string-array name="exercises">
+        <item>Des pompes</item>
+        <item>Squat Thrusts</item>
+        <item>Squats</item>
+        <item>Soulève la jambe</item>
+        <item>Crunches</item>
+        <item>Alpinistes</item>
+        <item>Planche</item>
+        <item>Genoux élevés</item>
+    </string-array>
 
 </resources>
