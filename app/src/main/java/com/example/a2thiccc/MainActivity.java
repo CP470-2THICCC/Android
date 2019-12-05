@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+<<<<<<< HEAD
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.media.Image;
@@ -30,6 +31,15 @@ import Adapter.MainAdapter;
 /**@author
  * Luka Sitas
  * */
+=======
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+
+//TODO: everything lol
+>>>>>>> origin/masterv2
 public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
@@ -45,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+<<<<<<< HEAD
         tb = findViewById(R.id.mainScreenToolbar);
         mainInfo = findViewById(R.id.editButton);
 
@@ -124,6 +135,50 @@ public class MainActivity extends AppCompatActivity {
         adapter.addNewItem(2);
         adapter.notifyDataSetChanged();
 
+=======
+
+        final Button settingsButton = findViewById(R.id.settingsB);
+        final Button profileButton = findViewById(R.id.profileB);
+        final Button fitnessButton = findViewById(R.id.fitnessB);
+        final Button nutritionButton = findViewById(R.id.nutritionB);
+
+        //Settings intent
+        settingsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent nextA = new Intent(MainActivity.this, SettingsActivity.class);
+                startActivityForResult(nextA, 10);
+            }
+        });
+
+        //Profile intent
+        profileButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent nextA = new Intent(MainActivity.this, ProfileActivity.class);
+                startActivityForResult(nextA, 10);
+
+            }
+        });
+
+        //Fitness intent
+        fitnessButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent nextA = new Intent(MainActivity.this, FitnessActivity.class);
+                startActivityForResult(nextA, 10);
+            }
+        });
+
+        //Nutrition intent
+        nutritionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent nextA = new Intent(MainActivity.this, NutritionActivity.class);
+                startActivityForResult(nextA, 10);
+            }
+        });
+>>>>>>> origin/masterv2
     }
     /**
      * Adds a profile view to the RecyclerView

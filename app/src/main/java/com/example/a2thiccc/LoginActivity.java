@@ -1,6 +1,10 @@
 package com.example.a2thiccc;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/masterv2
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -19,10 +23,14 @@ import android.widget.Toast;
 import androidx.appcompat.widget.Toolbar;
 import java.lang.ref.WeakReference;
 
+<<<<<<< HEAD
 /**
  * LoginActivity class
  * @author Jun Cao
  */
+=======
+//TODO: solve why opening alert dialog skips ~70 frames and to mainactivity skips ~40 frames
+>>>>>>> origin/masterv2
 public class LoginActivity extends AppCompatActivity {
     View view, view2;
     EditText usernameEdit, passwordEdit, nameEdit, confirmPassEdit,a,b;
