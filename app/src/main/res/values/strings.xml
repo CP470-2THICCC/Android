@@ -28,7 +28,7 @@
     <string name="plank">The plank (also called a front hold, hover, or abdominal bridge) is an isometric core strength exercise that involves maintaining a position similar to a push-up for the maximum possible time\nTarget: Core</string>
     <string name="high_knees">High Knees are a cardio-intensive exercise performed at a fast pace. It engages your core, strengthens all the muscles in your legs, gets your heart rate up and improves momentum, coordination and flexibility\nTarget: Legs</string>
     <string name="app_name2">Thiccbook</string>
-    <string name="hintTxtItem">Enter an item here ...</string>
+    <string name="hintTxtItem">Enter an item here</string>
     <string name="lblBtnAdd">Add</string>
     <string name="txtEmpty">List is empty</string>
     <string name="lblBtnDel">Delete Selected Exercises</string>
@@ -51,5 +51,15 @@
         <item>Plank</item>
         <item>High Knees</item>
     </string-array>
-
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="createUserButton">Create Account</string>
+    <string name="signup_name">Name</string>
+    <string name="dialogSU_confirm">Sign up</string>
+    <string name="dialogSU_cancel">Cancel</string>
+    <string name="dialogSU_confirmPass">Confirm Password</string>
+    <string name="BodyStats">Body</string>
+    <string name="Goals">Goals</string>
+    <string name="Timer">Timer</string>
+    <string name="Weight">Weight</string>
 </resources>
