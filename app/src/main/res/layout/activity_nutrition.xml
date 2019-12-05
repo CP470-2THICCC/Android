@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,31 +7,39 @@
     android:orientation="vertical"
     tools:context=".NutritionActivity">
 
+
     <TextView
         android:id="@+id/nutritionText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="29dp"
         android:text="@string/nutrition_text" />
 
-    <TextView
-        android:id="@+id/waterText"
-        android:layout_width="291dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="How many glasses of water did you drink today?" />
-
-    <EditText
-        android:id="@+id/waterEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:inputType="number" />
-
-    <Button
-        android:id="@+id/waterButton"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Enter water" />
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/waterText"
+            android:layout_width="152dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="How many glasses of water did you drink today?" />
+
+        <EditText
+            android:id="@+id/waterEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/waterButton"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="Enter water" />
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/waterLeftText"
@@ -40,25 +48,40 @@
         android:layout_weight="1"
         android:text="Glasses left to drink: 8" />
 
-    <TextView
-        android:id="@+id/calText"
+    <ProgressBar
+        android:id="@+id/waterProgressBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:max="8"
+        android:progress="0"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal" />
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="How many calories did you take in?" />
+        android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/calEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:inputType="number" />
+        <TextView
+            android:id="@+id/calText"
+            android:layout_width="152dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="How many calories did you take in?" />
 
-    <Button
-        android:id="@+id/calButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Enter calories" />
+        <EditText
+            android:id="@+id/calEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/calButton"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="Enter calories" />
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/calLeftText"
@@ -67,10 +90,18 @@
         android:layout_weight="1"
         android:text="Max calories left: 2000" />
 
+    <ProgressBar
+        android:id="@+id/calProgressBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:max="2000"
+        android:progress="0"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal" />
+
     <CalendarView
         android:id="@+id/calendarView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
 
-</TableLayout>
+</LinearLayout>
