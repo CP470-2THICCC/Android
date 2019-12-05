@@ -78,7 +78,7 @@
     <string name="profileInfoTitle">Profile Info</string>
     <string name="profileInfoText">\nUses toggle buttons to show/hide fragments. \n Fragments include a BMI calculator and a stopwatch.\n\n User will insert weight and height for BMI calculation and BMI will generate automatically.\n\n Stopwatch functionality will start, pause, resume, and reset, time will also be able to be edited.\n\n\n\nVersion: 3.5\nAuthor:Franchesco Livado </string>
     <string name="fitnessInfoTitle">Fitness Info</string>
-    <string name="fitnessInfoText">Put info about your part here</string>
+    <string name="fitnessInfoText">\nUses a spinner object to display information on a users\' fitness level based on how active they are in a week. It is diplayed using a fragment FrameLayout.\nFirst the fitness level is selected and then we\'re taken to the main fitness page.\n\nHere we can check the exercises available or create our own circuit (list) to add our own workouts and save them even if the app is exited.\n\n\nVersion 2.5 Anushaanth Jayanthan </string>
     <string name="nutritionInfoTitle">Nutrition Info</string>
     <string name="nutritionInfoText">\nUses a calendar to let the user enter water and caloric intake for each day.\n Enter in the water consumption and caloric intake in the boxes provided. \n Press the buttons beside the text boxes to add that to daily water/calorie progress.\n\n Select a day on the calendar to update water/calorie progress for that day.\n\n\n\nVersion: 3.5\nAuthor: Stefan Lucic</string>
     <string name="mainInfoTitle">Main Page Info</string>
