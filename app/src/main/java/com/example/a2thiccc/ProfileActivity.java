@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-//TODO: everything lol
 public class ProfileActivity extends AppCompatActivity {
 
     @Override
