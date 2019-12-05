@@ -6,7 +6,6 @@
     android:theme="@android:style/Theme.DeviceDefault.NoActionBar"
     android:layout_height="match_parent"
     android:orientation="vertical"
-<<<<<<< HEAD
     tools:context=".MainActivity"
     >
     <androidx.appcompat.widget.Toolbar
@@ -72,46 +71,3 @@
 
 </LinearLayout>
 
-=======
-    tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/mainText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/main_text" />
-
-    <Button
-        android:id="@+id/settingsB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/settings_button"
-        tools:layout_editor_absoluteX="156dp"
-        tools:layout_editor_absoluteY="120dp" />
-
-    <Button
-        android:id="@+id/profileB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/profile_button"
-        tools:layout_editor_absoluteX="156dp"
-        tools:layout_editor_absoluteY="212dp" />
-
-    <Button
-        android:id="@+id/fitnessB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/fitness_button"
-        tools:layout_editor_absoluteX="156dp"
-        tools:layout_editor_absoluteY="316dp" />
-
-    <Button
-        android:id="@+id/nutritionB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/nutrition_button"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="429dp" />
-
-</LinearLayout>
->>>>>>> origin/masterv2

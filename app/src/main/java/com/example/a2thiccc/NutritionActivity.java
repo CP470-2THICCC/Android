@@ -11,20 +11,9 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-<<<<<<< HEAD
 import com.google.android.material.snackbar.Snackbar;
 
 
-
-/*TODO:
-    add bmi
-    add water intake
-    add calorie counter
-    maybe recipies
-* */
-=======
-//TODO: everything lol
->>>>>>> origin/masterv2
 public class NutritionActivity extends AppCompatActivity {
 
     private Button waterButton;

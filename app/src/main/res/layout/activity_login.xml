@@ -93,8 +93,4 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/masterv2
 </androidx.constraintlayout.widget.ConstraintLayout>

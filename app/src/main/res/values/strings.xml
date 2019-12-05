@@ -5,14 +5,7 @@
     <string name="fitness_button">Fitness</string>
     <string name="nutrition_button">Nutrition</string>
     <string name="profile_button">Profile</string>
-<<<<<<< HEAD
-=======
-    <string name="login_text">This is the login page</string>
-    <string name="settings_text">This is the settings page</string>
-    <string name="fitness_text">2Thicc Fitness</string>
-    <string name="nutrition_text">This is the nutrition page</string>
-    <string name="main_text">This is the main page</string>
-    <string name="profile_text">This is the profile page</string>
+    <string name="fitness_text">Fitness</string>
     <string name="exercise_list">Exercise List</string>
     <string name="intro_message">Please select your current fitness level:</string>
     <string name="intro_message2">Welcome to 2Thicc Fitness!\nWe help you plan and execute your goals by choosing your preferred exercies and curating your own circuits!</string>
@@ -35,7 +28,6 @@
     <string name="txtEmpty">List is empty</string>
     <string name="lblBtnDel">Delete Selected Exercises</string>
     <string name="lblBtnSave">Save</string>
-
     <string name="proceed_button">Proceed</string>
     <string-array name="difficulties">
         <item>Beginner</item>
@@ -53,7 +45,6 @@
         <item>Plank</item>
         <item>High Knees</item>
     </string-array>
->>>>>>> origin/masterv2
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="createUserButton">Create Account</string>
@@ -63,7 +54,6 @@
     <string name="dialogSU_confirmPass">Confirm Password</string>
     <string name="BodyStats">Body</string>
     <string name="Goals">Goals</string>
-<<<<<<< HEAD
     <string name="Help">Author: Jun Cao\n\nVersion: 4.0\n\nNote: Fresh APK installation will not have\nDB set up.\n\nInstructions:\n\n1. Create an account before logging in.\n\n2. Enter correct credentials to log in.
     </string>
     <string name="Timer">Stopwatch</string>
@@ -105,10 +95,4 @@
     <string name="snackbar">You have exceeded your daily calorie limit!</string>
     <string name="snackbarBtn">I will try to do better</string>
     <string name="snackbarMsg">Good, otherwise you will stay 2Thiccc!</string>
-
-
-=======
-    <string name="Timer">Timer</string>
-    <string name="Weight">Weight</string>
->>>>>>> origin/masterv2
 </resources>

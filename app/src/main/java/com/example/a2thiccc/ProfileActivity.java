@@ -16,7 +16,6 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ToggleButton;
 
-<<<<<<< HEAD
 import android.content.SharedPreferences;
 import android.os.CountDownTimer;
 import android.view.inputmethod.InputMethodManager;
@@ -66,11 +65,6 @@ public class ProfileActivity extends AppCompatActivity implements body_metrics.O
     private RecyclerView.LayoutManager layoutManager;
 
 
-=======
-//TODO: everything lol
-public class ProfileActivity extends AppCompatActivity implements body_metrics.OnListFragmentInteractionListener {
-    Fragment fragment;
->>>>>>> origin/masterv2
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

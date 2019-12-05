@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-=======
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
->>>>>>> origin/masterv2
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,10 +7,6 @@
     android:orientation="vertical"
     tools:context=".NutritionActivity">
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/masterv2
     <TextView
         android:id="@+id/nutritionText"
         android:layout_width="match_parent"
@@ -129,8 +121,4 @@
         android:layout_height="wrap_content" />
 
 
-<<<<<<< HEAD
 </LinearLayout>
-=======
-</TableLayout>
->>>>>>> origin/masterv2
