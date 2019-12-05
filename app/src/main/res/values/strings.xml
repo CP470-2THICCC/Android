@@ -73,10 +73,10 @@
     <string name="nutrition_line3">Calendar</string>
     <string name="fitness_page_title">Fitness</string>
     <string name="fitness_line1">Workout Information</string>
-    <string name="fitness_line2">Item 2</string>
-    <string name="fitness_line3">Item 3</string>
+    <string name="fitness_line2">Adaptive Programs</string>
+    <string name="fitness_line3">Various Exercises</string>
     <string name="profileInfoTitle">Profile Info</string>
-    <string name="profileInfoText">Put info about your part here</string>
+    <string name="profileInfoText">\nUses toggle buttons to show/hide fragments. \n Fragments include a BMI calculator and a stopwatch.\n\n User will insert weight and height for BMI calculation and BMI will generate automatically.\n\n Stopwatch functionality will start, pause, resume, and reset, time will also be able to be edited.\n\n\n\nVersion: 3.5\nAuthor:Franchesco Livado </string>
     <string name="fitnessInfoTitle">Fitness Info</string>
     <string name="fitnessInfoText">Put info about your part here</string>
     <string name="nutritionInfoTitle">Nutrition Info</string>
