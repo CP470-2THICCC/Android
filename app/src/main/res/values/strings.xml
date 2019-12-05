@@ -52,6 +52,9 @@
     <string name="waterLeft">Glasses left to drink: </string>
     <string name="calLeft">Max calories left: </string>
     <string name="waterDrank">You drank the daily recommended amount of water</string>
+    <string name="snackbar">You have exceeded your daily calorie limit!</string>
+    <string name="snackbarBtn">I will try to do better</string>
+    <string name="snackbarMsg">Good, otherwise you will stay 2Thiccc!</string>
 
 
 </resources>

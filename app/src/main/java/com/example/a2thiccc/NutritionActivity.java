@@ -33,7 +33,7 @@ public class NutritionActivity extends AppCompatActivity {
     private ProgressBar calProgressBar;
     private CalendarView simpleCalendarView;
 
-    //private View v;
+    private View v;
 
     String water = "";
     int waterEntered = 0;
@@ -60,7 +60,7 @@ public class NutritionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nutrition);
 
-        //v = findViewById(android.R.id.content);
+        v = findViewById(android.R.id.content);
 
         simpleCalendarView = findViewById(R.id.calendarView);
 
@@ -147,19 +147,19 @@ public class NutritionActivity extends AppCompatActivity {
                 //calProgress = calProgress + calsEntered;
                 if (calProgress > 2000) {
                     calProgress = 2000;
-                    /*
+
                     Snackbar snackbar = Snackbar
-                            .make(v, "You've exceeded your daily calorie limit!", Snackbar.LENGTH_LONG)
-                            .setAction("I will try to do better", new View.OnClickListener() {
+                            .make(v, R.string.snackbar, Snackbar.LENGTH_LONG)
+                            .setAction(R.string.snackbarBtn, new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
-                                    Snackbar snackbar1 = Snackbar.make(v, "Good, otherwise you will stay 2Thicc!", Snackbar.LENGTH_SHORT);
+                                    Snackbar snackbar1 = Snackbar.make(v, R.string.snackbarMsg, Snackbar.LENGTH_SHORT);
                                     snackbar1.show();
                                 }
                             });
 
                     snackbar.show();
-                     */
+
                 }
                 calResult = 2000 - calProgress;
                 calProgressBar.setProgress(calProgress);

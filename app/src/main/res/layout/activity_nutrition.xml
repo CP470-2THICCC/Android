@@ -11,7 +11,7 @@
     <TextView
         android:id="@+id/nutritionText"
         android:layout_width="match_parent"
-        android:layout_height="29dp"
+        android:layout_height="wrap_content"
         android:text="@string/nutrition_text" />
 
     <LinearLayout
@@ -53,7 +53,7 @@
         android:id="@+id/waterLeftNum"
         android:layout_width="291dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_weight="0"
         android:text="8"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
@@ -68,6 +68,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="0"
         android:orientation="horizontal">
 
         <TextView
@@ -103,7 +104,7 @@
         android:id="@+id/calLeftNum"
         android:layout_width="291dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_weight="0"
         android:text="2000"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
