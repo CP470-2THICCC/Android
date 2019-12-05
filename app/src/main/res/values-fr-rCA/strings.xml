@@ -45,4 +45,11 @@
     <string name="mainInfoTitle">Informations sur la page principale</string>
     <string name="mainInfoText">\n\nUtilise une vue du recycleur pour parcourir les activités disponibles.\n\nCliquez sur les vues pour accéder à l’activité de votre choix.\n\nCliquez sur l'icône située dans le coin inférieur droit de la vue pour afficher des informations sur l'activité et l'auteur.\n\nAjoutez et supprimez des éléments du recycleur à l’aide des boutons de la vue en bas de la vue du recycleur.\n\n\n\nVersion: 2.1\nAuteur: Luka Sitas</string>
     <string name="addItemTitle">Ajouter un item</string>
+    <string name="Water">Combien de verres d'eau avez-vous bu aujourd'hui?</string>
+    <string name="waterButton">Entrez l'eau</string>
+    <string name="Calories">Combien de calories avez-vous absorbées?</string>
+    <string name="calButton">Entrez les calories</string>
+    <string name="waterLeft">Verres laissés à boire: </string>
+    <string name="calLeft">Max calories restantes: </string>
+    <string name="waterDrank">Vous avez bu la quantité d'eau recommandée par jour</string>
 </resources>
