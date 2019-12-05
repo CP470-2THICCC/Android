@@ -22,4 +22,17 @@
     <string name="Goals">Goals</string>
     <string name="Timer">Timer</string>
     <string name="Weight">Weight</string>
+
+    //Nutrition Page Strings
+    <string name="Water">How many glasses of water did you drink today?</string>
+    <string name="waterButton">Enter water</string>
+    <string name="Calories">How many calories did you take in?</string>
+    <string name="calButton">Enter calories</string>
+    <string name="waterLeft">Glasses left to drink: 8</string>
+    <string name="calLeft">Max calories left: 2000</string>
+    <string name="waterLeft2">Glasses left to drink: </string>
+    <string name="calLeft2">Max calories left: </string>
+    <string name="waterDrank">You drank the daily recommended amount of water</string>
+
+
 </resources>

@@ -27,7 +27,7 @@ public class NutritionActivity extends AppCompatActivity {
     private ProgressBar calProgressBar;
     private CalendarView simpleCalendarView;
 
-    //private View v = findViewById(android.R.id.content);
+    //private View v;
 
     String water = "";
     int waterEntered = 0;
@@ -53,6 +53,8 @@ public class NutritionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nutrition);
+
+        //v = findViewById(android.R.id.content);
 
         simpleCalendarView = findViewById(R.id.calendarView);
 
@@ -90,12 +92,12 @@ public class NutritionActivity extends AppCompatActivity {
                 waterProgress = waterArray[currentYear][currentMonth][currentDay];
                 waterResult = 8 - waterProgress;
                 waterProgressBar.setProgress(waterProgress);
-                waterLeft.setText("Glasses left to drink: " +waterResult);
+                waterLeft.setText(R.string.waterLeft2 +waterResult);
 
                 calProgress = calArray[currentYear][currentMonth][currentDay];
                 calResult = 2000 - calProgress;
                 calProgressBar.setProgress(calProgress);
-                calLeft.setText("Max calories left: " +calResult);
+                calLeft.setText(R.string.calLeft2 +calResult);
             }
         });
 
@@ -117,9 +119,9 @@ public class NutritionActivity extends AppCompatActivity {
                 }
                 waterResult = 8 - waterProgress;
                 waterProgressBar.setProgress(waterProgress);
-                waterLeft.setText("Glasses left to drink: " +waterResult);
+                waterLeft.setText(R.string.waterLeft2 +waterResult);
                 if (waterResult == 0) {
-                    Toast toast = Toast.makeText(getApplicationContext(), "You drank the daily recommended amount of water", Toast.LENGTH_LONG);
+                    Toast toast = Toast.makeText(getApplicationContext(), R.string.waterDrank, Toast.LENGTH_LONG);
                     toast.show();
                 }
             }
@@ -155,7 +157,7 @@ public class NutritionActivity extends AppCompatActivity {
                 }
                 calResult = 2000 - calProgress;
                 calProgressBar.setProgress(calProgress);
-                calLeft.setText("Max calories left: " +calResult);
+                calLeft.setText(R.string.calLeft2 +calResult);
             }
         });
     }

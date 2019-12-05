@@ -24,7 +24,7 @@
             android:layout_width="152dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="How many glasses of water did you drink today?" />
+            android:text="@string/Water" />
 
         <EditText
             android:id="@+id/waterEditText"
@@ -37,7 +37,7 @@
             android:id="@+id/waterButton"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
-            android:text="Enter water" />
+            android:text="@string/waterButton" />
 
     </LinearLayout>
 
@@ -46,7 +46,7 @@
         android:layout_width="291dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="Glasses left to drink: 8" />
+        android:text="@string/waterLeft" />
 
     <ProgressBar
         android:id="@+id/waterProgressBar"
@@ -66,7 +66,7 @@
             android:layout_width="152dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="How many calories did you take in?" />
+            android:text="@string/Calories" />
 
         <EditText
             android:id="@+id/calEditText"
@@ -79,7 +79,7 @@
             android:id="@+id/calButton"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
-            android:text="Enter calories" />
+            android:text="@string/calButton" />
 
     </LinearLayout>
 
@@ -88,7 +88,7 @@
         android:layout_width="291dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="Max calories left: 2000" />
+        android:text="@string/calLeft" />
 
     <ProgressBar
         android:id="@+id/calProgressBar"
