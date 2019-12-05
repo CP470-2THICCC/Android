@@ -53,4 +53,8 @@
     <string name="waterLeft">Verres laissés à boire: </string>
     <string name="calLeft">Max calories restantes: </string>
     <string name="waterDrank">Vous avez bu la quantité d\'eau recommandée par jour</string>
+    <string name="snackbar">Vous avez dépassé votre limite quotidienne de calories!</string>
+    <string name="snackbarBtn">Je vais essayer de faire mieux</string>
+    <string name="snackbarMsg">Bien, sinon vous resterez 2Thiccc!</string>
+
 </resources>
