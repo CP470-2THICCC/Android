@@ -1,8 +1,6 @@
 package com.example.a2thiccc;
-
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -19,10 +17,12 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.widget.Toolbar;
-
 import java.lang.ref.WeakReference;
 
-//TODO: Help Toolbar
+/**
+ * LoginActivity class
+ * @author Jun Cao
+ */
 public class LoginActivity extends AppCompatActivity {
     View view, view2;
     EditText usernameEdit, passwordEdit, nameEdit, confirmPassEdit,a,b;
@@ -61,8 +61,11 @@ public class LoginActivity extends AppCompatActivity {
         else{
             a.setText(user);
         }
-        //login service
         loginButton.setOnClickListener(new View.OnClickListener() {
+            /**
+             * onClick listener for the loginButton
+             * Gets the text of both editTexts and verifies login
+             */
             @Override
             public void onClick(View view) {
                 Log.d("Login", "Login button clicked.");
@@ -77,7 +80,10 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });
-        //new User Service
+        /**
+         * onClick listener for the createUserButton
+         * Stores the user registration credentials in the database
+         */
         createUserButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -88,12 +94,21 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * validateLogin class which extends AsyncTask
+     */
     private class validateLogin extends AsyncTask<String, Integer, String> {
 
         private WeakReference<LoginActivity> loginActivity;
         public validateLogin(LoginActivity loginActivity){
             this.loginActivity = new WeakReference<>(loginActivity);
         }
+
+        /**
+         * doInBackground method which validates user credentials
+         * @param strings
+         * @return res, not null
+         */
         @Override
         protected String doInBackground(String... strings) {
 
@@ -119,6 +134,11 @@ public class LoginActivity extends AppCompatActivity {
             return "0";
         }
         }
+
+        /**
+         * Updates the UI thread with result after finishing background thread
+         * @param a, not null
+         */
         @Override
         protected void onPostExecute(String a) {
                 loginBar.setVisibility(View.INVISIBLE);
@@ -156,13 +176,26 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 }
         }
+
+        /**
+         * Updates the UI thread with progress on validation
+         * @param values, not null
+         */
         @Override
         protected void onProgressUpdate(Integer... values) {
                 loginBar.setProgress(values[0]);
         }
     }
 
+    /**
+     * Register class with extends AsyncTask to insert user into DB
+     */
     private class register extends AsyncTask<String, Integer, String> {
+        /**
+         * doInBackground method that inserts user into DB
+         * @param strings
+         * @return
+         */
         @Override
         protected String doInBackground(String... strings) {
             //creates the new user
@@ -175,6 +208,11 @@ public class LoginActivity extends AppCompatActivity {
             return "";
         }
     }
+
+    /**
+     * signUp class that inflates a custom dialog alert
+     * Also validates any inputs
+     */
     public void signUp(){
         //Create builder pattern for alert dialog
         AlertDialog.Builder custom = new AlertDialog.Builder(LoginActivity.this);
@@ -261,10 +299,21 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * inflates the toolbar
+     * @param m
+     * @return true
+     */
     public boolean onCreateOptionsMenu(Menu m){
         getMenuInflater().inflate(R.menu.toolbar_menu, m);
         return true;
     }
+
+    /**
+     * inflates custom dialog for help button
+     * @param mi
+     * @return true
+     */
     public boolean onOptionsItemSelected(MenuItem mi) {
         int id = mi.getItemId();
         switch (id) {

@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     protected static final String ACTIVITY_NAME = "MainActivity";
     Toolbar tb;
     ImageButton mainInfo;
+    View view;
 
 
     @Override

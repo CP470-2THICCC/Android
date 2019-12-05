@@ -6,7 +6,9 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-
+/**
+ * DatabaseHelper class which extends SQLiteOpenHelper
+ */
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 2;
     private static final String DATABASE_NAME = "users.db";
@@ -19,16 +21,28 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             "name text not null, uname text not null, pass text not null)";
     SQLiteDatabase db;
 
+    /**
+     * Constructor for DatabaseHelper
+     * @param context, not null
+     */
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
+    /**
+     * Called when DB doesn't exist and creates tables
+     * @param db, not null
+     */
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(TABLE_CREATE);
         this.db = db;
     }
 
+    /**
+     * Inserts given user into the DB
+     * @param u, not null
+     */
     public void insertUser(User u){
         db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -49,6 +63,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
+    /**
+     * Searches for the password that corresponds to the username given
+     * @param uname, not null
+     * @return b
+     */
     public String searchPass(String uname){
         db = this.getReadableDatabase();
         //gets the username and pass columns from the table
@@ -85,6 +104,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return pname;
     }
     *************/
+    /**
+     * Checks if the table exists
+     * @param tName, not null
+     * @return true or false
+     */
     public boolean tableExists(String tName){
         db = getReadableDatabase();
         String query = "select DISTINCT tbl_name from sqlite_master where tbl_name = '" + tName +"'";
@@ -101,6 +125,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return false;
         }
     }
+
+    /**
+     * Called when version number increases
+     * @param db
+     * @param oldVersion
+     * @param newVersion
+     */
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         String query = "DROP TABLE IF EXISTS " +TABLE_NAME;
