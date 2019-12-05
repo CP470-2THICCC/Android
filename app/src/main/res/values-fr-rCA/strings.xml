@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">2THICCC</string>
+    <string name="login_button">Connexion</string>
+    <string name="settings_button">Paramètres</string>
+    <string name="fitness_button">Aptitude</string>
+    <string name="nutrition_button">Nutrition</string>
+    <string name="profile_button">Profil</string>
+    <string name="username">Nom d'utilisateur</string>
+    <string name="password">Mot de passe</string>
+    <string name="createUserButton">Créer un compte</string>
+    <string name="signup_name">Prénom</string>
+    <string name="dialogSU_confirm">S'inscrire</string>
+    <string name="dialogSU_cancel">Annuler</string>
+    <string name="dialogSU_confirmPass">Confirmez le mot de passe</string>
+    <string name="BodyStats">Organization</string>
+    <string name="Goals">Objectif</string>
+    <string name="Help">Auteur: Jun Cao\n\nVersion: 4.0\n\nRemarque: L'installation de la nouvelle version de APK n'aura pas\nDB de données configurée.\n\nInstructions:\n\n1. Créez un compte avant de vous connecter.\n\n2. Entrez les informations d'identification correctes pour vous connecter.
+    </string>
+    <string name="Timer">Chronomètre</string>
+    <string name="Weight">Poids (lbs)</string>
+    <string name="Height">L'hauteur (in)</string>
+    <string name="BMI">BMI</string>
+    <string name="hello_blank_fragment">Bonjour fragment vierge</string>
+    <string name="main_screen_Title">Écran principal</string>
+    <string name="main_toolbar_editor">Éditeur</string>
+    <string name="profile_page_title">Page de profil</string>
+    <string name="profile_line1">Informations personnelles</string>
+    <string name="profile_line3">Chronomètre</string>
+    <string name="profile_line2">Mesures du corps</string>
+    <string name="nutrition_page_title">Nutrition</string>
+    <string name="nutrition_line1">Consommation d'eau</string>
+    <string name="nutrition_line2">Apport calorique</string>
+    <string name="nutrition_line3">Calendrier</string>
+    <string name="fitness_page_title">Aptitude</string>
+    <string name="fitness_line1">Informations d'entraînement</string>
+    <string name="fitness_line2">Article 2</string>
+    <string name="fitness_line3">Article 3</string>
+    <string name="profileInfoTitle">Information de profil</string>
+    <string name="profileInfoText">Put info about your part here</string>
+    <string name="fitnessInfoTitle">Info Fitness</string>
+    <string name="fitnessInfoText">Put info about your part here</string>
+    <string name="nutritionInfoTitle">Informations sur la nutrition</string>
+    <string name="nutritionInfoText">Put info about your part here</string>
+    <string name="mainInfoTitle">Informations sur la page principale</string>
+    <string name="mainInfoText">\n\nUtilise une vue du recycleur pour parcourir les activités disponibles.\n\nCliquez sur les vues pour accéder à l’activité de votre choix.\n\nCliquez sur l'icône située dans le coin inférieur droit de la vue pour afficher des informations sur l'activité et l'auteur.\n\nAjoutez et supprimez des éléments du recycleur à l’aide des boutons de la vue en bas de la vue du recycleur.\n\n\n\nVersion: 2.1\nAuteur: Luka Sitas</string>
+    <string name="addItemTitle">Ajouter un item</string>
+</resources>

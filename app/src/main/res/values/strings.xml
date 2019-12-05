@@ -5,12 +5,6 @@
     <string name="fitness_button">Fitness</string>
     <string name="nutrition_button">Nutrition</string>
     <string name="profile_button">Profile</string>
-    <string name="login_text">This is the login page</string>
-    <string name="settings_text">This is the settings page</string>
-    <string name="fitness_text">This is the fitness page</string>
-    <string name="nutrition_text">This is the nutrition page</string>
-    <string name="main_text">This is the main page</string>
-    <string name="profile_text">This is the profile page</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="createUserButton">Create Account</string>
@@ -27,7 +21,6 @@
     <string name="Height">Height (in)</string>
     <string name="BMI">BMI</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="bgColour">#FC7A6E</string>
     <string name="main_screen_Title">Main Screen</string>
     <string name="main_toolbar_editor">Editor</string>
     <string name="profile_page_title">Profile Page</string>
