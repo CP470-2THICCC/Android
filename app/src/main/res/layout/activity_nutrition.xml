@@ -17,6 +17,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="0"
         android:orientation="horizontal">
 
         <TextView
@@ -24,7 +25,7 @@
             android:layout_width="152dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="How many glasses of water did you drink today?" />
+            android:text="@string/Water" />
 
         <EditText
             android:id="@+id/waterEditText"
@@ -37,7 +38,7 @@
             android:id="@+id/waterButton"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
-            android:text="Enter water" />
+            android:text="@string/waterButton" />
 
     </LinearLayout>
 
@@ -45,8 +46,16 @@
         android:id="@+id/waterLeftText"
         android:layout_width="291dp"
         android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text="@string/waterLeft" />
+
+    <TextView
+        android:id="@+id/waterLeftNum"
+        android:layout_width="291dp"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="Glasses left to drink: 8" />
+        android:text="8"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
     <ProgressBar
         android:id="@+id/waterProgressBar"
@@ -66,7 +75,7 @@
             android:layout_width="152dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="How many calories did you take in?" />
+            android:text="@string/Calories" />
 
         <EditText
             android:id="@+id/calEditText"
@@ -79,7 +88,7 @@
             android:id="@+id/calButton"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
-            android:text="Enter calories" />
+            android:text="@string/calButton" />
 
     </LinearLayout>
 
@@ -87,8 +96,16 @@
         android:id="@+id/calLeftText"
         android:layout_width="291dp"
         android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text="@string/calLeft" />
+
+    <TextView
+        android:id="@+id/calLeftNum"
+        android:layout_width="291dp"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="Max calories left: 2000" />
+        android:text="2000"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
     <ProgressBar
         android:id="@+id/calProgressBar"
